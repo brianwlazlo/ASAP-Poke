@@ -13,10 +13,10 @@
       <div class='nav-links darker-text'>
         <a href="#about-us">About</a>
         <a href="#menu">Menu</a>
-        <a href="#">Order</a>
-        <a href="#">Gallery</a>
-        <a href="#">Rewards</a>
-        <a href="#">Newsletter</a>
+        <a href="#">Order Online</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#rewards">Rewards</a>
+        <a href="#newsletter">Newsletter</a>
       </div>
     </nav>
   
@@ -55,7 +55,7 @@
     <section class="pimg2"></section>
 
     <!-- Menu START -->
-    <section id="menu" class="container dark-bg darker-text">
+    <section id="menu" class="container darker-text">
       <div class="menu title">
         <h2>Menu</h2>
       </div>
@@ -130,6 +130,10 @@
           <p>Cucumber, Edamame, Seaweed, Tomato Salsa, Tobiko, Watermelon radish, Pickled Ginger, Furikake (Asian Crunch Mix), Ginger-Yuzu Sauce</p>
         </div>
       </div>
+
+      <div class="order btn">
+        <h1>Order Now</h1>
+      </div>
     </section>
     <!-- Menu END -->
 
@@ -148,6 +152,63 @@
       </div>
     </section>
     <!-- PIC Gallery END -->
+
+    <!-- Newsletter & Rewards Program START -->
+    <section id="newsletter-rewards">
+      <div id="rewards" class="rewards darker-text">
+        <div class="rewards-content">
+          <div class="title">
+            <h2>Join the Frequent Diner Club!</h2>
+          </div>
+          <div class="rewards-description">
+            <p>Earn Lettuce Entertain You Frequent Diner points by adding your FD number to the comment section of your order!</p>
+            <p>Not a Member?</p>
+            <p>Download the LettuceEats App now!</p>
+          </div>
+          <div class="rewards btn">
+            <a href="https://www.leye.com/frequent-diner/" target='_blank'><h1>Download Now</h1></a>
+          </div>
+        </div>
+      </div>
+      
+      <div id="newsletter" class="newsletter darker-text">
+        <div class="newsletter-content">
+          <div class="title">
+            <h2>Sign Up for our Newsletter</h2>
+          </div>
+          <div class="rewards-form-container">
+            <form action="#" method='POST' id='newsletter-form'>
+
+              <div class="form-grp">
+                <label for="name">Name:</label>
+                <input id='name' type="text" name="Name" class='form-style'>
+              </div>
+              <div class="form-grp">
+                <label for="email">Email:</label>
+                <input id='email' type="text" name="email" class='form-style'>
+              </div>
+              <div class="form-grp">
+                <label for="phone">Phone:</label>
+                <input id='phone' type="text" name="phone" class='form-style'>
+              </div>
+              <div class="form-grp">
+                <label for="birthday">Birthday:</label>
+                <input id='birthday' type="text" name="birthday" class='form-style'>
+              </div>
+              <div class="form-grp">
+                <label for="zip-code">Zip Code:</label>
+                <input id='zip-code' type="text" name="zip-code" class='form-style'>
+              </div>
+
+              <button type='submit' id='form-btn' class='btn'>Sign Up!</button>
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Newsletter & Rewards Program END -->
+
   </main>
 
   <script src='./app.js'></script>

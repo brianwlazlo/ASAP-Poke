@@ -18,13 +18,12 @@ nav {
 /* --- TEXT Formatting ---*/
 
 a {text-decoration: none;}
+a:visited {color:rgb(62,169,159,255)!important;}
 .btn h1 {font-size: 14px;}
 
 /* --- Modifiers ----*/
 .dark-bg {background-color:rgb(107, 202, 193);}
-
 .light-text{color: rgb(236, 234, 234);}
-
 .darker-text {color:rgb(121, 119, 119);}
 
 /*--- Button Styling ---*/
@@ -34,9 +33,10 @@ a {text-decoration: none;}
   border: 2px solid rgb(62,169,159,255);
   padding: 10px;
   color: rgb(62,169,159,255);
-  background: transparent;
+  background: rgba(255, 255, 255, 0.75);
 }
 
+.btn:hover {cursor: pointer;}
 
 /*--- Parallax Images ---*/
 .pimg1, .pimg2 {
