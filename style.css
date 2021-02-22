@@ -20,6 +20,13 @@ nav {
 a {text-decoration: none;}
 .btn h1 {font-size: 14px;}
 
+/* --- Modifiers ----*/
+.dark-bg {background-color:rgb(107, 202, 193);}
+
+.light-text{color: rgb(236, 234, 234);}
+
+.darker-text {color:rgb(121, 119, 119);}
+
 /*--- Button Styling ---*/
 
 .btn {
