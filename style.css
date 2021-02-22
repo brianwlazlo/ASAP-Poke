@@ -4,6 +4,7 @@
   padding: 0;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   line-height: 1.5;
+  scroll-behavior: smooth;
 }
 
 html, body, main {
@@ -81,6 +82,16 @@ a {text-decoration: none;}
   margin-bottom: 20px;
 }
 
+/* --- Gallery Styles --*/
 
+.gallery-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.images img {
+  width: 100%;
+  height: auto;
+}
 
 
