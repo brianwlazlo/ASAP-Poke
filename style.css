@@ -19,23 +19,44 @@ nav {
 a {text-decoration: none;}
 .btn h1 {font-size: 14px;}
 
+/*--- Button Styling ---*/
 
-/* --- Home Page ---*/
-.container {
-  border: 1px solid red;  
-  display: flex;
-  align-items: stretch;
+.btn {
+  width: fit-content;
+  border: 2px solid rgb(62,169,159,255);
+  padding: 10px;
+  color: rgb(62,169,159,255);
+  background: transparent;
+}
+
+
+/*--- Parallax Images ---*/
+.pimg1, .pimg2 {
+  position: relative;
+  opacity: 0.70;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
 }
 
 .pimg1 {
   background-image: url(./images/Poke.jpg);
   min-height: 40%;
-  position: relative;
-  opacity: 0.70;
   background-position: left top;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: scroll;
+}
+
+.pimg2 {
+  background-image: url(./images/build-your-own.jpg);
+  min-height: 200px;
+  background-position: center center;
+}
+
+
+/* --- Home Page ---*/
+.home-container {
+  border: 1px solid red;  
+  display: flex;
+  align-items: stretch;
 }
 
 .left {
@@ -60,12 +81,6 @@ a {text-decoration: none;}
   margin-bottom: 20px;
 }
 
-.btn {
-  width: fit-content;
-  border: 2px solid rgb(62,169,159,255);
-  padding: 10px;
-  color: rgb(62,169,159,255);
-  background: transparent;
-}
+
 
 
