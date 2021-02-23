@@ -24,23 +24,41 @@ nav{
 
 nav li {
   list-style: none;
+  padding: 20px;
+  margin:10px;
+  color: white;
 }
 
 .nav-links {
-  display: flex;
-  justify-content: center;
-  background-color: rgb(255, 255, 255);
-  padding: 20px;
+  text-align: center;
+  transition: .5s all ease-in-out;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 60px;
+  background-color: rgb(62,169,159,255);
+  left: -100%;
+  transition: all .5s;
 }
 
-.nav-links a:not(:last-child){
-  margin-right: 10px;
+nav .nav-links.show {
+  left: 0;
 }
+
+.nav-links a {
+  color: white;
+  font-size: 18px;
+}
+
+.nav-links a:visited {
+  color: white !important;
+}
+
 
 /* --- TEXT Formatting ---*/
 
 a         {text-decoration: none;}
-a:visited {color:rgb(62,169,159,255)!important;}
+a:visited {color:rgb(62,169,159,255)}
 .btn h1   {font-size: 14px;}
 .title    {font-size: 18px;  color: rgb(62,169,159,255);}
 .menu-sub-title {font-size: 16px;}
@@ -56,6 +74,7 @@ a:visited {color:rgb(62,169,159,255)!important;}
 /* --- Modifiers ----*/
 .hide {display: none;}
 .darker-text {color:rgb(121, 119, 119);}
+.light-text {color: white}
 .feature p {
   font-size: 28px;
   font-weight: lighter;
@@ -82,7 +101,7 @@ a:visited {color:rgb(62,169,159,255)!important;}
   height: 5px;
   background-color: rgb(62,169,159,255);
   margin: 6px 0;
-  transition: 0.4s;
+  border-radius: 8px;
 }
 
 .change .bar1 {
