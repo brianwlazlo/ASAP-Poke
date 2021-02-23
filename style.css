@@ -81,20 +81,19 @@ a:visited {color:rgb(62,169,159,255)!important;}
 /*--- Parallax Images ---*/
 .pimg1, .pimg2 {
   position: relative;
-  opacity: 0.7;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: scroll;
 }
 
 .pimg1 {
-  background-image: url(./images/Poke.jpg);
+  background-image: url(./images/Poke-65-Transparancy.jpg);
   min-height: 40%;
   background-position: left top;
 }
 
 .pimg2 {
-  background-image: url(./images/build-your-own.jpg);
+  background-image: url(./images/build-your-own-65-Transparancy.jpg);
   min-height: 200px;
   background-position: center center;
 }
@@ -177,7 +176,7 @@ a:visited {color:rgb(62,169,159,255)!important;}
 
 /*--- Newsletter & Rewards ---*/
 .newsletter-rewards {
-  background-image: url(./images/catering.jpg);
+  background-image: url(./images/go-poke03-65-Transparancy.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -200,7 +199,54 @@ a:visited {color:rgb(62,169,159,255)!important;}
   padding: 10px;
   border: 1px solid lightgray;
   background-color: white;
+}
+
+/* -- newsletter sign-up form --*/
+
+label {
+  font-size: 16px;
+}
+
+.newsletter-form-container {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   
+}
+
+.form-container {
+  width: 90%;
+  max-width: 500px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.form-grp {
+  width: 100%;
+  margin-top: 20px;
+  font-size: 12px;
+}
+
+.form-grp input, .form-grp textarea {
+  width: 100%;
+  margin-top: 8px;
+  padding: 10px;
+  font-size: 14px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  
+}
+
+textarea {
+  resize: vertical;
+}
+
+.form-style {
+  border: 1px solid lightgray;
+  outline: none;
 }
 
 
