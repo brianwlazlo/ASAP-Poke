@@ -1,9 +1,9 @@
 * {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  line-height: 1.5;
+  line-height: 1.8;
+  padding:0;
+  margin: 0;
   scroll-behavior: smooth;
 }
 
@@ -11,20 +11,60 @@ html, body, main {
   height: 100%;
 }
 
-nav {
-  border: 1px solid blue;
+nav{
+  position: fixed;
+  top:0;
+  z-index: 1;
+  width: 100%;
+  height:60px;
+  padding: 15px;
+  background-color:white;
+  box-shadow: 0px 3px 10px rgb(117, 113, 113);
+}
+
+.nav-links {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-links a:not(:last-child){
+  margin-right: 10px;
 }
 
 /* --- TEXT Formatting ---*/
 
-a {text-decoration: none;}
+a         {text-decoration: none;}
 a:visited {color:rgb(62,169,159,255)!important;}
-.btn h1 {font-size: 14px;}
+.btn h1   {font-size: 14px;}
+.title    {font-size: 18px;  color: rgb(62,169,159,255);}
+.menu-sub-title {font-size: 16px;}
+.content, 
+.menu-description, 
+.rewards-description {font-size: 14px;}
+.menu-item h4 {
+  font-size: 22px;
+  font-weight: lighter;
+  color: rgb(62,169,159,255);
+}
 
 /* --- Modifiers ----*/
 .dark-bg {background-color:rgb(107, 202, 193);}
 .light-text{color: rgb(236, 234, 234);}
 .darker-text {color:rgb(121, 119, 119);}
+.feature p {
+  font-size: 28px;
+  font-weight: lighter;
+  color: rgb(62,169,159,255);
+}
+
+/* --- General Content Spaceing ---*/
+.about-us, .gallery-container .content {
+  margin: 40px 3% 60px 3%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
 /*--- Button Styling ---*/
 
@@ -41,7 +81,7 @@ a:visited {color:rgb(62,169,159,255)!important;}
 /*--- Parallax Images ---*/
 .pimg1, .pimg2 {
   position: relative;
-  opacity: 0.70;
+  opacity: 0.7;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -65,6 +105,7 @@ a:visited {color:rgb(62,169,159,255)!important;}
   border: 1px solid red;  
   display: flex;
   align-items: stretch;
+  margin-top: 60px;
 }
 
 .left {
@@ -76,7 +117,7 @@ a:visited {color:rgb(62,169,159,255)!important;}
 
 .logo img {
   width: 100%;
-  margin-top: 5%;
+  margin-top: 10%;
   margin-bottom: 20%;
 }
 
@@ -89,16 +130,97 @@ a:visited {color:rgb(62,169,159,255)!important;}
   margin-bottom: 20px;
 }
 
-/* --- Gallery Styles --*/
+/*--- About Us ---*/
+.about-us .title {
+  margin-bottom: 10px;
+}
 
-.gallery-container {
+.about-us .content p {
+  padding: 5px;
+  margin:5px;
+  text-align: center;
+}
+
+/* --- Menu Styles ---*/
+.menu {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color:rgb(247, 253, 253);
+  padding-top: 20px;
+  padding-bottom: 40px;
 }
+
+.bowl-choice, .poke-choice, .style-choice {
+  text-align: center;
+  margin: 10px 5% 30px 5%;
+  padding: 15px;
+  background-color: white;
+  border-radius: 8px;
+  border: 1px solid lightgray;
+}
+
+.menu-sub-title, .menu-description {
+  margin-bottom: 15px;
+  padding:5px;
+}
+
+
+
+/* --- Gallery Styles --*/
 
 .images img {
   width: 100%;
   height: auto;
+}
+
+/*--- Newsletter & Rewards ---*/
+.newsletter-rewards {
+  background-image: url(./images/catering.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+.rewards, .newsletter {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 30px;
+  
+}
+
+.rewards-content, .newsletter-content {
+  margin-left: 5%;
+  margin-right: 5%;
+  padding: 10px;
+  border: 1px solid lightgray;
+  background-color: white;
+  
+}
+
+
+@media all and (min-width: 800px) {
+  .container, .gallery-container .content {
+    margin: 40px 10% 60px 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .pimg1, .pimg2 {
+    background-attachment: fixed;
+    min-height: 90%;
+  }
+
+  .pimg2 {
+    min-height: 400px;
+  }
+
 }
 
 
