@@ -51,10 +51,6 @@ a:visited   {color:rgb(62,169,159,255)!important;}
   color: rgb(62,169,159,255);
 }
 
-.weekly-special .menu-sub-title {
-  color: white;
-}
-
 .rewards-content .title, .newsletter-content .title {
   font-size: 20px;
   text-align: center;
@@ -65,12 +61,27 @@ a:visited   {color:rgb(62,169,159,255)!important;}
 .hide {display: none;}
 .light-text {color: white}
 .turquoise-text {color: rgb(62,169,159,255);}
+.salmon-text {color: #F37976 !important;}
 .feature {
   text-align: center;
-  font-size: 36px;
-  letter-spacing: 2px;
+  font-size: 24px;
+  letter-spacing: 4px;
   color: #F37976;
   font-family: 'Permanent Marker', cursive;
+  position: relative;
+}
+
+.feature::after {
+  position:absolute;
+  content:'';
+  height: 8px;
+  bottom: -4px;
+  background: rgba(44, 44, 236, 0.589);
+  left:0;
+  right:0;
+  margin:0 auto;
+  width: 250px;
+  
 }
 
 
@@ -242,17 +253,27 @@ nav .nav-links.show {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 20px;
+  padding-top: 30px;
   padding-bottom: 40px;
   background-color:rgb(247, 253, 253);
 }
 
-.weekly-special {
-  background-color: rgb(53, 52, 52);
+.menu .title {
+  padding: 30px 30px 40px 30px;
 }
+
+.weekly-special {
+  width: 60%;
+  text-align: center;
+}
+
 .menu-choices {
   margin-top: 20px;
   width:90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .bowl-choice, .poke-choice, .style-choice {
@@ -270,6 +291,10 @@ nav .nav-links.show {
 .menu-sub-title, .menu-description {
   margin-bottom: 15px;
   padding:5px;
+}
+
+.order-btn {
+  margin-top: 40px;
 }
 
 
@@ -321,28 +346,29 @@ label {
   outline: none;
 }
 
-
+/*--- Footer Styling ---*/
+.footer {
+  background-color: rgb(62,169,159,255);
+  min-height: 80px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 
 @media all and (min-width: 600px) {
   /*-- TEXT resizing --*/
   .about-us .content, 
-  .rewards-description {
-    font-size: 16px;
-  }
+  .rewards-description {font-size: 16px;}
+  .feature           {font-size: 38px;}
+  .menu-sub-title    {font-size: 30px;}
 
-  .nav-links {
-    width: 50%;
-  }
+  .nav-links         {width: 50%;}
+  .about-us          {min-height: 400px;}
+  .about-us .content {max-width: 600px;}
 
-  .about-us {
-    min-height: 400px;
-  }
-
-  .about-us .content {
-    max-width: 600px;
-  }
-
+  .feature::after { width: 400px;}
   .gallery-images {
     display: flex;
     width: 300px;
@@ -449,22 +475,18 @@ label {
     margin-right: 60px;
   }
 
-  
-  
-
   .bowl-choice {
-    min-width: 350px; 
-    max-width: 400px;
+    width: 375px;
     max-height: 450px;
     margin-top:0;
-    margin-right: 40px;
     
   }
+
   .poke-choice {
     min-width: 350px;
     max-height: 300px;
     margin-top: 0;
-    margin-right: 40px;
+    
   }
   .style-choice {min-width: 350px; max-width: 450px;}
 
