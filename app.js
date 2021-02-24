@@ -1,9 +1,66 @@
-function closeMenu(x) {
-  x.classList.toggle('show');
-  $('.menu-icon').toggleClass('change');
+function handleMenuClick () {
+  $('.js-menu-icon').click(function() {
+    $('.menu-icon').toggleClass('change');
+    $('.nav-links').toggleClass('show');
+  })
 }
 
-function transformMenu(x) {
-  x.classList.toggle("change");
-  $('.nav-links').toggleClass('show');
+$(handleMenuClick);
+
+function handleCloseMenu() {
+  $('.js-menu-icon').click(function(x) {
+    $(this).toggleClass('show');
+    $('.menu-icon').toggleClass('change');
+  })
 }
+
+$(handleCloseMenu);
+
+
+function displayFormData(name, email, phone, birthday, zip) {
+  let formArr = [name, email, phone, birthday, zip];
+  let formObject = {
+    FullName: name,
+    Email: email,
+    Tel: phone,
+    Birthday: birthday,
+    ZipCode: zip,
+  }
+  console.log(formArr)
+  console.log(formObject);
+
+  clearForm();
+}
+
+function clearForm () {
+  $('#name').val('');
+  $('#email').val('');
+  $('#tel').val('');
+  $('#birthday').val('');
+  $('#zip-code').val('');
+}
+
+function handleOrderBtn () {
+  $('.js-order-btn').click(function () {
+    console.log("Make call to ChowNow API");
+  })
+}
+
+$(handleOrderBtn);
+
+function watchForm() {
+  $('#newsletter-form').submit(event => {
+    event.preventDefault();
+    let name = $('#name').val();
+    let email = $('#email').val();
+    let phone = $('#tel').val();
+    let birthday = $('#birthday').val();
+    let zip = $('#zip-code').val();
+    displayFormData (name, email, phone, birthday, zip);
+  })
+};
+
+$(function() {
+  console.log('Form Ready');
+  watchForm();
+});

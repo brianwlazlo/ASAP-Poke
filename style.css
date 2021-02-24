@@ -192,6 +192,10 @@ nav .nav-links.show {
   font-size: 18px;
 }
 
+.nav-links li:hover {
+  background-color: #F37976;
+}
+
 .nav-links a:visited {
   color: white !important;
 }
