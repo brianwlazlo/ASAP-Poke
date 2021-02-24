@@ -8,13 +8,15 @@
   <title>ASAP Poke</title>
 </head>
 <body>
-  
-    <nav id="nav" >
-      <div class="menu-icon" onClick='transformMenu(this)'>
+    
+    <nav>
+
+      <button id='hamburger' aria-label='navigation menu' class="menu-icon" onClick='transformMenu(this)'>
         <div class="bar1"></div>
         <div class="bar2"></div>
         <div class="bar3"></div>
-      </div>
+      </button>
+
       <ul class='nav-links' onClick='closeMenu(this)'>
         <li><a href="#about-us">About</a></li>
         <li><a href="#menu">Menu</a></li>
@@ -24,21 +26,21 @@
         <li><a href="#newsletter">Newsletter</a></li>
       </ul>
     </nav>
-  
+
 
   
   <main>
     <!-- HOME Section-->
     <section id='home' class="home-container pimg1">
-      <div class="left">
+      <div class="home__content">
         <div class="logo">
           <img src="./logos/Asap-Poke.png" alt="ASAP Poke: Bowls and Rolls Logo">
         </div>
         <div class="btn-container">
-          <div class="order btn">
+          <div role='button' class="order btn">
             <a href="#menu"><h1>Order Now</h1></a>
           </div>
-          <div class="rewards btn">
+          <div role='button' class="rewards btn">
             <a href="#rewards"><h1>Earn Points</h1></a>
           </div>
         </div>
@@ -46,7 +48,7 @@
     </section>
 
     <!-- About Us -->
-    <section id="about-us" class="about-us darker-text">
+    <section aria-label='about ASAP Poke' id="about-us" class="about-us darker-text">
       <div class="title">
         <h2>About Us</h2>
       </div>
@@ -60,7 +62,7 @@
     <section class="pimg2"></section>
 
     <!-- Menu START -->
-    <section id="menu" class="menu darker-text">
+    <section aria-label='Our Menu' id="menu" class="menu darker-text">
       <div class="menu title">
         <h2>Menu</h2>
       </div>
@@ -160,7 +162,7 @@
     <!-- PIC Gallery END -->
 
     <!-- Newsletter & Rewards Program START -->
-    <section id="newsletter-rewards" class='newsletter-rewards'>
+    <section aria-label='Join Frequent Diner program or sign up for our newsletter' id="newsletter-rewards" class='newsletter-rewards'>
       <div id="rewards" class="rewards darker-text">
         <div class="rewards-content">
           <div class="title">
