@@ -16,7 +16,7 @@ a       {text-decoration: none;}
 
 a:visited   {color:rgb(62,169,159,255)!important;}
 
-.btn h1, .rewards-btn h1  {font-size: 14px;}
+.order-btn h1, .points-btn h1, .rewards-btn h1, .sign-up-btn  {font-size: 14px;}
 
 .nav-links li a {
   font-family: 'Shadows Into Light', cursive;
@@ -113,8 +113,7 @@ a:visited   {color:rgb(62,169,159,255)!important;}
 
 /*--- Button Styling ---*/
 
-.btn, .rewards-btn {
-  width: 115px;
+.order-btn, .points-btn, .rewards-btn, .sign-up-btn {
   border: 2px solid rgb(62,169,159,255);
   border-radius: 10px;
   padding: 10px;
@@ -122,7 +121,10 @@ a:visited   {color:rgb(62,169,159,255)!important;}
   background: rgba(255, 255, 255, 0.75);
 }
 
-.btn:hover {cursor: pointer;}
+.order-btn, .points-btn, .sign-up-btn {width: 115px;}
+
+
+.order-btn, .points-btn, .rewards-btn, .sign-up-btn:hover {cursor: pointer;}
 
 /*---- Navigation ----*/
 nav{
@@ -297,7 +299,7 @@ nav .nav-links.show {
   padding:5px;
 }
 
-.order-btn {
+.menu .order-btn {
   margin-top: 40px;
 }
 
@@ -387,7 +389,6 @@ label {
     font-size: 18px;
   }
 
-
   .newsletter-rewards {
     background-color:rgb(247, 253, 253);
     padding: 30px;
@@ -434,8 +435,8 @@ label {
 
 @media all and (min-width: 800px) {
   /*--text re-sizing--*/
-  .btn h1     {font-size: 24px;}
-
+  .order-btn h1, .points-btn h1 {font-size: 24px;}
+  .sign-up-btn, .rewards-btn h1 {font-size: 18px;}
   .nav-links  {width: 25%;}
 
   .pimg1, .pimg2, .pimg3  {background-attachment: fixed;}
@@ -467,7 +468,11 @@ label {
     margin-top:0;
   }
   
-  .btn, .rewards-btn {
+  .order-btn, .points-btn {
+    width: 180px;
+  }
+
+  .rewards-btn {
     width: 180px;
   }
 
