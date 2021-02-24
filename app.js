@@ -1,5 +1,5 @@
 function handleMenuClick () {
-  $('.js-menu-icon').click(function() {
+  $('.menu-icon').click(function() {
     $('.menu-icon').toggleClass('change');
     $('.nav-links').toggleClass('show');
   })
@@ -8,7 +8,7 @@ function handleMenuClick () {
 $(handleMenuClick);
 
 function handleCloseMenu() {
-  $('.js-menu-icon').click(function(x) {
+  $('.nav-links').click(function(x) {
     $(this).toggleClass('show');
     $('.menu-icon').toggleClass('change');
   })
