@@ -89,6 +89,9 @@ a:visited   {color:rgb(62,169,159,255)!important;}
 .pimg1, .pimg2, .pimg3 {
   position: relative;
   background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-repeat: no-repeat;
   background-attachment: scroll;
 }
