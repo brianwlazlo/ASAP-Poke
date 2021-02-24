@@ -16,15 +16,29 @@ a       {text-decoration: none;}
 
 a:visited   {color:rgb(62,169,159,255)!important;}
 
-.order-btn h1, .points-btn h1, .rewards-btn h1, .sign-up-btn  {font-size: 14px;}
+.order-btn h1, 
+.points-btn h1, 
+.rewards-btn h1, 
+.sign-up-btn  {
+  font-size: 14px;
+}
 
 .nav-links li a {
   font-family: 'Shadows Into Light', cursive;
   letter-spacing: 5px;
   font-size: 32px;
+  color: white;
 }
 
-.title  {
+.nav-links li:hover {
+  background-color: #F37976;
+}
+
+.nav-links a:visited {
+  color: white !important;
+}
+
+.title {
   font-family: 'Shadows Into Light', cursive;
   font-size: 32px;
   letter-spacing: 3px;
@@ -51,7 +65,8 @@ a:visited   {color:rgb(62,169,159,255)!important;}
   color: rgb(62,169,159,255);
 }
 
-.rewards-content .title, .newsletter-content .title {
+.rewards-content .title, 
+.newsletter-content .title {
   font-size: 20px;
   text-align: center;
 }
@@ -59,12 +74,10 @@ a:visited   {color:rgb(62,169,159,255)!important;}
 label {
   font-size: 14px;
 }
+
 /* -- TEXT formatting END --*/
 
 /* --- Modifiers ----*/
-.hide {display: none;}
-.light-text {color: white}
-.turquoise-text {color: rgb(62,169,159,255);}
 .salmon-text {color: #F37976 !important;}
 .feature {
   text-align: center;
@@ -120,7 +133,10 @@ label {
 
 /*--- Button Styling ---*/
 
-.order-btn, .points-btn, .rewards-btn, .sign-up-btn {
+.order-btn, 
+.points-btn, 
+.rewards-btn, 
+.sign-up-btn {
   border: 2px solid rgb(62,169,159,255);
   border-radius: 10px;
   padding: 10px;
@@ -128,11 +144,21 @@ label {
   background: rgba(255, 255, 255, 0.75);
 }
 
-.order-btn, .points-btn, .sign-up-btn {width: 115px;}
+.order-btn, 
+.points-btn, 
+.rewards-btn, 
+.sign-up-btn:hover {
+  cursor: pointer;
+}
+
+.order-btn, 
+.points-btn, 
+.sign-up-btn {
+  width: 115px;
+}
+
 .rewards-btn {width: 150px;}
 
-
-.order-btn, .points-btn, .rewards-btn, .sign-up-btn:hover {cursor: pointer;}
 
 /*---- Navigation ----*/
 nav{
@@ -150,7 +176,6 @@ nav li {
   list-style: none;
   padding: 20px;
   margin:10px;
-  color: white;
 }
 
 .menu-icon {
@@ -195,19 +220,6 @@ nav li {
 
 nav .nav-links.show {
   left: 0;
-}
-
-.nav-links a {
-  color: white;
-  font-size: 18px;
-}
-
-.nav-links li:hover {
-  background-color: #F37976;
-}
-
-.nav-links a:visited {
-  color: white !important;
 }
 
 /* --- Home Page ---*/
@@ -287,7 +299,9 @@ nav .nav-links.show {
   align-items: center;
 }
 
-.bowl-choice, .poke-choice, .style-choice {
+.bowl-choice, 
+.poke-choice, 
+.style-choice {
   text-align: center;
   padding: 15px;
   background-color: white;
@@ -369,25 +383,15 @@ nav .nav-links.show {
   .rewards-description {font-size: 16px;}
   .feature           {font-size: 38px;}
   .menu-sub-title    {font-size: 30px;}
+  .rewards-content .title, .newsletter-content .title {
+    font-size: 18px;
+  }
 
   .nav-links         {width: 50%;}
   .about-us          {min-height: 400px;}
   .about-us .content {max-width: 600px;}
 
   .feature::after { width: 400px;}
-  .gallery-images {
-    display: flex;
-    width: 300px;
-    justify-content:space-between
-  }
-
-  .gallery-images img {
-    margin: 15px;
-  }
-
-  .rewards-content .title, .newsletter-content .title {
-    font-size: 18px;
-  }
 
   .newsletter-rewards {
     background-color:rgb(247, 253, 253);
@@ -479,12 +483,12 @@ nav .nav-links.show {
   .btn-container {
     margin-left: 5%;
     display: flex;
+    border: 1px solid orange;
   }
   
   
   .order-btn {
-    margin-bottom: 0;
-    margin-right: 60px
+    margin: 0 16px 0 0;
   }
 
   .bowl-choice {
@@ -500,7 +504,10 @@ nav .nav-links.show {
     margin-top: 0;
     
   }
-  .style-choice {min-width: 350px; max-width: 450px;}
+  .style-choice {
+    min-width: 350px; 
+    max-width: 450px;
+  }
 
 
 }
