@@ -83,7 +83,7 @@ a:visited {
 
 
 /*--- Parallax Images ---*/
-.pimg1, .pimg2 {
+.pimg1, .pimg2, .pimg3 {
   position: relative;
   background-size: cover;
   background-repeat: no-repeat;
@@ -99,8 +99,15 @@ a:visited {
 .pimg2 {
   background-image: url(./images/build-your-own.jpg);
   min-height: 200px;
+  background-position: center center;  
+}
+
+.pimg3 {
+  background-image: url(./images/go-poke03.jpg);
+  min-height: 500px;
   background-position: center center;
 }
+/*---- Navigation ----*/
 
 nav{
   position: fixed;
@@ -188,8 +195,6 @@ nav .nav-links.show {
 
 /* --- Home Page ---*/
 .home-container {
-  display: flex;
-  align-items: stretch;
   margin-top: 60px;
 }
 
@@ -223,6 +228,13 @@ nav .nav-links.show {
 }
 
 /*--- About Us ---*/
+.about-us {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .about-us .title {
   margin-bottom: 10px;
 }
@@ -323,6 +335,14 @@ label {
 
 
 @media all and (min-width: 600px) {
+  .about-us {
+    min-height: 400px;
+  }
+
+  .about-us .content {
+    max-width: 600px;
+  }
+
   .gallery-images {
     display: flex;
     width: 300px;
@@ -380,25 +400,63 @@ label {
   .form-grp, .form-grp #form-btn {
     width: 50%;
   }
- 
-  
 }
 
 @media all and (min-width: 800px) {
-  .container, .gallery-container, .about-us  {
-    margin: 40px 10% 60px 10%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .pimg1, .pimg2 {
+  /*--text re-sizing--*/
+  .btn h1 {font-size: 24px;}
+
+  .pimg1, .pimg2, .pimg3 {
     background-attachment: fixed;
+  }
+
+  .pimg1 {
     min-height: 90%;
+    background-position: center top;
   }
 
   .pimg2 {
-    min-height: 400px;
+    min-height: 500px;
+  }
+
+  .pimg3 {
+    min-height: 500px;
+  }
+
+ 
+
+  .home__content {
+    margin-left: 5%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .logo {
+    width: 100%;
+    margin-top: 8%;
+    margin-bottom: 5%;
+    background: none;
+  }
+  
+  .logo img {
+    width: 55%;
+    max-width: 500px;
+    margin-top:0;
+  }
+  
+  .btn-container {
+    margin-left: 5%;
+    display: flex;
+  }
+  
+  .btn-container .btn {
+    margin: 0;
+  }
+  
+  .btn-container :not(:last-child) {
+    margin-bottom:0;
+    margin-right: 60px;
   }
 
 }
