@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Shadows+Into+Light&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <title>ASAP Poke</title>
 </head>
@@ -21,9 +23,8 @@
         <li><a href="#about-us">About</a></li>
         <li><a href="#menu">Menu</a></li>
         <li><a href="#">Order Online</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#rewards">Rewards</a></li>
-        <li><a href="#newsletter">Newsletter</a></li>
+        <li><a href="#newsletter-rewards">Rewards</a></li>
+        <li><a href="#newsletter-rewards">Newsletter</a></li>
       </ul>
     </nav>
 
@@ -37,10 +38,10 @@
           <img src="./logos/Asap-Poke.png" alt="ASAP Poke: Bowls and Rolls Logo">
         </div>
         <div class="btn-container">
-          <div role='button' class="order btn">
+          <div role='button' class="btn">
             <a href="#menu"><h1>Order Now</h1></a>
           </div>
-          <div role='button' class="rewards btn">
+          <div role='button' class="btn">
             <a href="#rewards"><h1>Earn Points</h1></a>
           </div>
         </div>
@@ -48,7 +49,7 @@
     </section>
 
     <!-- About Us -->
-    <section aria-label='about ASAP Poke' id="about-us" class="about-us darker-text">
+    <section aria-label='about ASAP Poke' id="about-us" class="about-us">
       <div class="title">
         <h2>About Us</h2>
       </div>
@@ -62,15 +63,17 @@
     <section class="pimg2"></section>
 
     <!-- Menu START -->
-    <section aria-label='Our Menu' id="menu" class="menu darker-text">
+    <section aria-label='Our Menu' id="menu" class="menu">
       <div class="menu title">
         <h2>Menu</h2>
       </div>
-      <div class="menu-sub-title">
-        <h3>This Week's Seasonal Ingredient</h3>
-      </div>
-      <div class="menu-description feature">
-        <p>Bluefin Tuna</p>
+      <div class="weekly-special">
+        <div class="menu-sub-title">
+          <h3>This Week's Seasonal Ingredient</h3>
+        </div>
+        <div class="menu-description feature">
+          <p>Bluefin Tuna</p>
+        </div>
       </div>
       <!-- Menu Step 1 -->
       <div class="bowl-choice">
@@ -146,13 +149,10 @@
     <!-- Menu END -->
 
     <!-- PIC Gallery START -->
-    <section id="gallery" class="gallery-container darker-text">
+    <section id="gallery" class="gallery-container">
       <div class="gallery content">
-        <div class="gallery title">
-          <h2>Gallery</h2>
-        </div>
-        <div class="gallery images">
-          <img src="./images/ASAP Poke_Classic Ahi Tuna_75.jpg" alt="Ahi Tuna Poke Bowl">
+
+        <div class="gallery-images">
           <img src="./images/asap-poke-02.jpg" alt="Atlantic Salmon Poke Bowl">
           <img src="./images/go-poke03.jpg" alt="Poke Toppings assembled on 1 plate">
           <img src="./images/go-poke07.jpg" alt="Gingered Beets and Ahi Tuna Poke Bowls">
@@ -163,57 +163,56 @@
 
     <!-- Newsletter & Rewards Program START -->
     <section aria-label='Join Frequent Diner program or sign up for our newsletter' id="newsletter-rewards" class='newsletter-rewards'>
-      <div id="rewards" class="rewards darker-text">
-        <div class="rewards-content">
-          <div class="title">
-            <h2>Join the Frequent Diner Club!</h2>
-          </div>
-          <div class="rewards-description">
-            <p>Earn Lettuce Entertain You Frequent Diner points by adding your FD number to the comment section of your order!</p>
-            <p>Not a Member?</p>
-            <p>Download the LettuceEats App now!</p>
-          </div>
-          <div class="rewards btn">
-            <a href="https://www.leye.com/frequent-diner/" target='_blank'><h1>Download Now</h1></a>
-          </div>
+
+      <div class="rewards-content">
+        <div class="title">
+          <h2>Join the Frequent Diner Club!</h2>
+        </div>
+        <div class="rewards-description">
+          <p>Earn Lettuce Entertain You Frequent Diner points by adding your FD number to the comment section of your order!</p>
+          <p>Not a Member?</p>
+          <p>Download the LettuceEats App now!</p>
+        </div>
+        <div class="rewards btn">
+          <a href="https://www.leye.com/frequent-diner/" target='_blank'><h1>Download Now</h1></a>
         </div>
       </div>
       
-      <div id="newsletter" class="newsletter darker-text">
-        <div class="newsletter-content">
-          <div class="title">
-            <h2>Sign Up for our Newsletter</h2>
-          </div>
-          <div class="newsletter-form-container">
-            <form action="#" method='POST' id='newsletter-form'>
+      
 
-              <div class="form-grp">
-                <label for="name">Name:</label>
-                <input id='name' type="text" name="Name" class='form-style'>
-              </div>
-              <div class="form-grp">
-                <label for="email">Email:</label>
-                <input id='email' type="email" name="email" class='form-style'>
-              </div>
-              <div class="form-grp">
-                <label for="phone">Phone:</label>
-                <input id='tel' type="tel" name="tel" class='form-style'>
-              </div>
-              <div class="form-grp">
-                <label for="birthday">Birthday:</label>
-                <input id='birthday' type="text" name="birthday" class='form-style'>
-              </div>
-              <div class="form-grp">
-                <label for="zip-code">Zip Code:</label>
-                <input id='zip-code' type="text" name="zip-code" class='form-style'>
-              </div>
+      <div class="newsletter-content">
+        <div class="title">
+          <h2>Sign Up for our Newsletter</h2>
+        </div>
+        <div class="newsletter-form-container">
+          <form action="#" method='POST' id='newsletter-form'>
 
+            <div class="form-grp">
+              <label for="name">Name:</label>
+              <input id='name' type="text" name="Name" class='form-style'>
+          
+            
+              <label for="email">Email:</label>
+              <input id='email' type="email" name="email" class='form-style'>
+            
+            
+              <label for="phone">Phone:</label>
+              <input id='tel' type="tel" name="tel" class='form-style'>
+            </div>
+
+            <div class="form-grp">
+              <label for="birthday">Birthday:</label>
+              <input id='birthday' type="text" name="birthday" class='form-style'>
+            
+              <label for="zip-code">Zip Code:</label>
+              <input id='zip-code' type="text" name="zip-code" class='form-style'>
+            
               <button type='submit' id='form-btn' class='btn'>Sign Up!</button>
-
-            </form>
-          </div>
+            </div>
+          </form>
         </div>
       </div>
+      
     </section>
     <!-- Newsletter & Rewards Program END -->
 
