@@ -1,12 +1,12 @@
 function handleMenuClick () {
-  $('.menu-icon').click(function() {
+  $('.menu-icon, .nav-links').click(function() {
     $('.menu-icon').toggleClass('change');
     $('.nav-links').toggleClass('show');
   })
 }
 
 $(handleMenuClick);
-
+/*
 function handleCloseMenu() {
   $('.nav-links').click(function(x) {
     $(this).toggleClass('show');
@@ -15,7 +15,7 @@ function handleCloseMenu() {
 }
 
 $(handleCloseMenu);
-
+*/
 
 function displayFormData(name, email, phone, birthday, zip) {
   let formArr = [name, email, phone, birthday, zip];
@@ -29,21 +29,23 @@ function displayFormData(name, email, phone, birthday, zip) {
   console.log(formArr)
   console.log(formObject);
 
-  clearForm();
+  //clearForm();
 }
 
 function clearForm () {
-  $('#name').val('');
-  $('#email').val('');
-  $('#tel').val('');
-  $('#birthday').val('');
-  $('#zip-code').val('');
+  $('.newsletter-form-container').hide();
+  $('#form-response').removeClass('hide');
+  $('#form-response').append('<p>Succes! Form Submitted!</p>')
+
 }
 
-function validateZip (zip) {
+function validateZip (name, email, phone, birthday, zip) {
   let isValid = /(^\d{5}$)|(^\d{5}-\d{4}$)/.test(zip);
   if (!isValid) {
-    alert('Please Enter Valid Zip Code')
+    $('#form-validation').append('<p>Please Enter A Valid Zip Code</p>').removeClass('hide');
+  } else {
+    displayFormData(name, email, phone, birthday, zip);
+    clearForm();
   }
 }
 
@@ -60,11 +62,11 @@ function watchForm() {
     event.preventDefault();
     let name = $('#name').val();
     let email = $('#email').val();
-    let phone = $('#tel').val();
+    let phone = $('#tel').val().replace(/[^0-9]/gi, '');
     let birthday = $('#birthday').val();
     let zip = $('#zip-code').val();
-    displayFormData (name, email, phone, birthday, zip);
-    validateZip(zip);
+    //displayFormData (name, email, phone, birthday, zip);
+    validateZip(name, email, phone, birthday, zip);
   })
 };
 
