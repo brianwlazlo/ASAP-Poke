@@ -40,6 +40,13 @@ function clearForm () {
   $('#zip-code').val('');
 }
 
+function validateZip (zip) {
+  let isValid = /(^\d{5}$)|(^\d{5}-\d{4}$)/.test(zip);
+  if (!isValid) {
+    alert('Please Enter Valid Zip Code')
+  }
+}
+
 function handleOrderBtn () {
   $('.js-order-btn').click(function () {
     console.log("Make call to ChowNow API");
@@ -57,6 +64,7 @@ function watchForm() {
     let birthday = $('#birthday').val();
     let zip = $('#zip-code').val();
     displayFormData (name, email, phone, birthday, zip);
+    validateZip(zip);
   })
 };
 
