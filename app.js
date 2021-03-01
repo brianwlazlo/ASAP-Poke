@@ -5,17 +5,6 @@ function handleMenuClick () {
   })
 }
 
-$(handleMenuClick);
-/*
-function handleCloseMenu() {
-  $('.nav-links').click(function(x) {
-    $(this).toggleClass('show');
-    $('.menu-icon').toggleClass('change');
-  })
-}
-
-$(handleCloseMenu);
-*/
 
 function displayFormData(name, email, phone, birthday, zip) {
   let formArr = [name, email, phone, birthday, zip];
@@ -29,13 +18,11 @@ function displayFormData(name, email, phone, birthday, zip) {
   console.log(formArr)
   console.log(formObject);
 
-  //clearForm();
 }
 
 function clearForm () {
   $('.newsletter-form-container').hide();
-  $('#form-response').removeClass('hide');
-  $('#form-response').append('<p>Succes! Form Submitted!</p>')
+  $('#form-response').removeClass('hide').append('<p>Succes! Form Submitted!</p>');
 
 }
 
@@ -65,7 +52,6 @@ function watchForm() {
     let phone = $('#tel').val().replace(/[^0-9]/gi, '');
     let birthday = $('#birthday').val();
     let zip = $('#zip-code').val();
-    //displayFormData (name, email, phone, birthday, zip);
     validateZip(name, email, phone, birthday, zip);
   })
 };
