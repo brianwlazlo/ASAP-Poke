@@ -5,6 +5,8 @@ function handleMenuClick () {
   })
 }
 
+$(handleMenuClick);
+
 
 function displayFormData(name, email, phone, birthday, zip) {
   let formArr = [name, email, phone, birthday, zip];
